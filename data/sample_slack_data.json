@@ -1,0 +1,142 @@
+[
+    {
+        "type": "message",
+        "user": "U001",
+        "text": "안녕하세요! 프로젝트 진행 상황은 어떤가요?",
+        "ts": "1703001600.000001",
+        "channel": "general"
+    },
+    {
+        "type": "message",
+        "user": "U002",
+        "text": "현재 70% 정도 완료되었습니다. API 연동 부분만 마무리하면 됩니다.",
+        "ts": "1703001700.000002",
+        "channel": "general"
+    },
+    {
+        "type": "message",
+        "user": "U003",
+        "text": "Python에서 OpenAI API를 사용하는 방법을 알려주실 수 있나요?",
+        "ts": "1703002000.000003",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U004",
+        "text": "먼저 pip install openai로 패키지를 설치하고, API 키를 설정한 후 client = OpenAI(api_key='your-key')로 초기화하면 됩니다.",
+        "ts": "1703002100.000004",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U001",
+        "text": "다음 주 회의 일정은 언제인가요?",
+        "ts": "1703003000.000005",
+        "channel": "general"
+    },
+    {
+        "type": "message",
+        "user": "U002",
+        "text": "화요일 오후 2시로 예정되어 있습니다.",
+        "ts": "1703003100.000006",
+        "channel": "general"
+    },
+    {
+        "type": "message",
+        "user": "U003",
+        "text": "ChromaDB와 벡터 검색 기능을 구현하고 있는데, 임베딩 생성 부분에서 막혔어요.",
+        "ts": "1703004000.000007",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U004",
+        "text": "OpenAI의 text-embedding-3-small 모델을 사용하시는 것을 추천합니다. 성능도 좋고 비용도 저렴합니다.",
+        "ts": "1703004100.000008",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U005",
+        "text": "FastAPI와 Streamlit을 함께 사용하는 프로젝트 구조는 어떻게 설계하는 것이 좋을까요?",
+        "ts": "1703005000.000009",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U004",
+        "text": "FastAPI는 백엔드 API 서버로, Streamlit은 프론트엔드로 분리해서 개발하는 것이 좋습니다. FastAPI는 8000번 포트, Streamlit은 8501번 포트로 실행하면 됩니다.",
+        "ts": "1703005200.000010",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U001",
+        "text": "프로젝트 마감일이 다음 달 15일이라고 하셨죠?",
+        "ts": "1703006000.000011",
+        "channel": "project"
+    },
+    {
+        "type": "message",
+        "user": "U002",
+        "text": "네, 맞습니다. 그때까지 테스트와 문서화까지 완료해야 합니다.",
+        "ts": "1703006100.000012",
+        "channel": "project"
+    },
+    {
+        "type": "message",
+        "user": "U006",
+        "text": "Docker 컨테이너로 배포할 때 주의사항이 있나요?",
+        "ts": "1703007000.000013",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U004",
+        "text": "환경변수는 .env 파일 대신 docker-compose.yml에서 관리하고, 볼륨 마운트로 데이터 영속성을 보장해야 합니다.",
+        "ts": "1703007200.000014",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U001",
+        "text": "오늘 점심 메뉴 추천 부탁드립니다!",
+        "ts": "1703008000.000015",
+        "channel": "random"
+    },
+    {
+        "type": "message",
+        "user": "U005",
+        "text": "날씨가 추우니 따뜻한 국밥이나 라멘은 어떠신가요?",
+        "ts": "1703008100.000016",
+        "channel": "random"
+    },
+    {
+        "type": "message",
+        "user": "U003",
+        "text": "pandas DataFrame을 JSON으로 변환하는 가장 효율적인 방법은 무엇인가요?",
+        "ts": "1703009000.000017",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U004",
+        "text": "df.to_json(orient='records')를 사용하면 리스트 형태로 깔끔하게 변환됩니다.",
+        "ts": "1703009100.000018",
+        "channel": "dev-help"
+    },
+    {
+        "type": "message",
+        "user": "U002",
+        "text": "Git 브랜치 전략은 어떻게 가져가실 건가요?",
+        "ts": "1703010000.000019",
+        "channel": "project"
+    },
+    {
+        "type": "message",
+        "user": "U001",
+        "text": "Git Flow를 사용하려고 합니다. main, develop, feature 브랜치로 관리할 예정입니다.",
+        "ts": "1703010100.000020",
+        "channel": "project"
+    }
+]

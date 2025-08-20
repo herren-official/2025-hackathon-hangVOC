@@ -1,0 +1,33 @@
+# Core
+python-dotenv==1.0.0
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
+
+# FastAPI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Streamlit
+streamlit==1.29.0
+
+# Claude API
+anthropic==0.39.0
+
+# Embedding Models
+sentence-transformers==3.3.1
+
+# OpenAI (optional, for backward compatibility)
+openai==1.6.0
+tiktoken>=0.11.0
+
+# ChromaDB
+chromadb==0.4.18
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Utils
+tenacity==8.2.3
+requests==2.31.0
