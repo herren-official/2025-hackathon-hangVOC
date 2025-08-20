@@ -17,6 +17,9 @@ class Settings(BaseSettings):
     # API 제공자 선택 ('claude' 또는 'openai')
     api_provider: str = "openai"  # 기본값은 openai로 설정
     
+    # Slack API 설정
+    slack_bot_token: Optional[str] = None
+    
     chroma_persist_directory: str = "./chroma_db"
     chroma_collection_name: str = "slack_messages"
     

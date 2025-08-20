@@ -3,6 +3,10 @@ python-dotenv==1.0.0
 pydantic>=2.10.0
 pydantic-settings>=2.6.0
 
+# Slack SDK
+slack-sdk==3.31.0
+certifi>=2024.0.0
+
 # FastAPI
 fastapi==0.104.1
 uvicorn[standard]==0.24.0

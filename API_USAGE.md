@@ -2,7 +2,42 @@
 
 ## API 엔드포인트
 
-### 1. 단일 파일 업로드
+### Slack API 연동 (새로운 기능! 🚀)
+
+#### 1. Slack 채널 목록 조회
+**GET** `/api/v1/slack/channels`
+
+워크스페이스의 모든 채널 목록을 가져옵니다.
+
+```bash
+curl -X GET "http://localhost:8000/api/v1/slack/channels"
+```
+
+#### 2. Slack 메시지 동기화
+**POST** `/api/v1/slack/sync`
+
+최근 Slack 메시지를 자동으로 가져와서 인덱싱합니다.
+
+```bash
+# 최근 24시간 메시지 동기화
+curl -X POST "http://localhost:8000/api/v1/slack/sync?hours_back=24"
+
+# 특정 채널만 동기화
+curl -X POST "http://localhost:8000/api/v1/slack/sync?hours_back=48&channels=general&channels=random"
+```
+
+#### 3. Slack 실시간 검색
+**POST** `/api/v1/slack/search`
+
+Slack API를 직접 사용하여 실시간 검색합니다.
+
+```bash
+curl -X POST "http://localhost:8000/api/v1/slack/search?query=프로젝트&count=10"
+```
+
+### 파일 업로드 방식
+
+#### 1. 단일 파일 업로드
 **POST** `/api/v1/index`
 
 JSON 파일 하나를 업로드하여 인덱싱합니다.

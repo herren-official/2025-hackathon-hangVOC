@@ -150,6 +150,82 @@ async def index_folder_data(folder: UploadFile = File(...)):
             os.unlink(temp_zip)
         raise HTTPException(status_code=500, detail=str(e))
 
+@router.post("/slack/sync")
+async def sync_slack_messages(
+    hours_back: int = 24,
+    channels: Optional[List[str]] = None
+):
+    """Slack API를 통해 최근 메시지 동기화
+    
+    Args:
+        hours_back: 몇 시간 전까지 동기화할지 (기본: 24시간)
+        channels: 특정 채널만 동기화 (없으면 모든 공개 채널)
+    """
+    try:
+        from app.services.slack_realtime import SlackRealtime
+        
+        slack = SlackRealtime()
+        
+        # 연결 테스트
+        connection_test = slack.test_connection()
+        if connection_test["status"] == "error":
+            raise HTTPException(status_code=401, detail=f"Slack 연결 실패: {connection_test['error']}")
+        
+        # 메시지 동기화
+        result = slack.sync_recent_messages(
+            hours_back=hours_back,
+            channels=channels
+        )
+        
+        return {
+            "status": "success",
+            "team": connection_test.get("team"),
+            "channels_synced": result["channels_synced"],
+            "messages_collected": result["messages_collected"],
+            "chunks_created": result["chunks_created"],
+            "errors": result["errors"]
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/slack/channels")
+async def get_slack_channels():
+    """Slack 워크스페이스의 채널 목록 가져오기"""
+    try:
+        from app.services.slack_realtime import SlackRealtime
+        
+        slack = SlackRealtime()
+        channels = slack.get_channels()
+        
+        return {
+            "status": "success",
+            "count": len(channels),
+            "channels": channels
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/slack/search")
+async def search_slack_realtime(query: str, count: int = 20):
+    """Slack에서 실시간 검색 (Slack API 직접 사용)"""
+    try:
+        from app.services.slack_realtime import SlackRealtime
+        
+        slack = SlackRealtime()
+        results = slack.search_in_slack(query=query, count=count)
+        
+        return {
+            "status": "success",
+            "query": query,
+            "count": len(results),
+            "results": results
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @router.get("/health")
 async def health_check():
     """헬스 체크 엔드포인트"""
