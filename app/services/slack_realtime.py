@@ -51,9 +51,9 @@ class SlackRealtime:
         """워크스페이스의 모든 채널 목록 가져오기"""
         channels = []
         try:
-            # 공개 채널 가져오기
+            # 공개 채널만 가져오기 (private_channel 제거)
             for page in self.client.conversations_list(
-                types="public_channel,private_channel",
+                types="public_channel",
                 limit=100
             ):
                 channels.extend(page["channels"])
@@ -210,8 +210,28 @@ class SlackRealtime:
                 progress_callback(f"{len(chunks)}개 청크 임베딩 생성 중...")
             embeddings = get_embeddings(texts)
             
-            # ChromaDB에 저장
+            # ChromaDB에 저장 (중복 제거)
             collection = get_collection()
+            
+            # 기존 Slack API 데이터 삭제 (동일 시간대 중복 방지)
+            try:
+                existing_data = collection.get(
+                    where={"source": "slack_api"}
+                )
+                if existing_data and existing_data['ids']:
+                    # 동일한 hours_back 범위의 기존 데이터만 삭제
+                    ids_to_delete = []
+                    for idx, metadata in enumerate(existing_data['metadatas']):
+                        if metadata.get('hours_back') == hours_back:
+                            ids_to_delete.append(existing_data['ids'][idx])
+                    
+                    if ids_to_delete:
+                        collection.delete(ids=ids_to_delete)
+                        logger.info(f"기존 데이터 {len(ids_to_delete)}개 삭제 (hours_back={hours_back})")
+            except Exception as e:
+                logger.warning(f"기존 데이터 삭제 중 오류: {e}")
+            
+            # 새 데이터 추가
             ids = [str(uuid.uuid4()) for _ in chunks]
             metadatas = [chunk["metadata"] for chunk in chunks]
             

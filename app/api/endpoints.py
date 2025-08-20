@@ -226,6 +226,39 @@ async def search_slack_realtime(query: str, count: int = 20):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@router.get("/slack/sync-status")
+async def get_sync_status():
+    """Slack 자동 동기화 상태 확인"""
+    try:
+        from app.services.scheduler import scheduler
+        return scheduler.get_status()
+    except Exception as e:
+        return {
+            "is_running": False,
+            "error": str(e)
+        }
+
+@router.post("/slack/sync-now")
+async def sync_now():
+    """즉시 동기화 실행 (스케줄과 별개로)"""
+    try:
+        from app.services.slack_realtime import SlackRealtime
+        
+        slack = SlackRealtime()
+        result = slack.sync_recent_messages(
+            hours_back=2,  # 최근 2시간
+            channels=None
+        )
+        
+        return {
+            "status": "success",
+            "channels_synced": result["channels_synced"],
+            "messages_collected": result["messages_collected"],
+            "chunks_created": result["chunks_created"]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @router.get("/health")
 async def health_check():
     """헬스 체크 엔드포인트"""

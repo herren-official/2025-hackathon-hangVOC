@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     
     # Slack API 설정
     slack_bot_token: Optional[str] = None
+    slack_sync_interval_minutes: int = 30  # 자동 동기화 간격 (분)
+    slack_sync_hours_back: int = 2  # 동기화할 메시지 시간 범위 (시간)
+    slack_auto_sync_enabled: bool = True  # 자동 동기화 활성화
     
     chroma_persist_directory: str = "./chroma_db"
     chroma_collection_name: str = "slack_messages"

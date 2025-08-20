@@ -50,41 +50,27 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 def chunk_messages(messages: List[SlackMessage], max_tokens: int = 1000) -> List[Dict]:
-    """메시지를 청크로 분할"""
+    """메시지를 개별 청크로 변환 - 1메시지 = 1청크"""
     chunks = []
-    current_chunk = []
-    current_tokens = 0
     
     for msg in messages:
-        msg_tokens = len(msg.text.split())
+        # 각 메시지를 독립적인 청크로 생성
+        chunk_text = f"{msg.user}: {msg.text}" if msg.user else msg.text
         
-        if current_tokens + msg_tokens > max_tokens and current_chunk:
-            chunk_text = "\n".join([m.text for m in current_chunk])
-            chunks.append({
-                "text": chunk_text,
-                "metadata": {
-                    "message_count": len(current_chunk),
-                    "first_ts": current_chunk[0].ts,
-                    "last_ts": current_chunk[-1].ts,
-                    "users": ", ".join(list(set([m.user for m in current_chunk if m.user])))
-                }
-            })
-            current_chunk = []
-            current_tokens = 0
+        metadata = {
+            "message_count": 1,  # 항상 1
+            "timestamp": msg.ts,
+            "user": msg.user if msg.user else "Unknown",
+            "channel": msg.channel if msg.channel else "Unknown"
+        }
         
-        current_chunk.append(msg)
-        current_tokens += msg_tokens
-    
-    if current_chunk:
-        chunk_text = "\n".join([m.text for m in current_chunk])
+        # thread_ts는 있을 때만 추가
+        if msg.thread_ts:
+            metadata["thread_ts"] = msg.thread_ts
+        
         chunks.append({
             "text": chunk_text,
-            "metadata": {
-                "message_count": len(current_chunk),
-                "first_ts": current_chunk[0].ts,
-                "last_ts": current_chunk[-1].ts,
-                "users": ", ".join(list(set([m.user for m in current_chunk if m.user])))
-            }
+            "metadata": metadata
         })
     
     return chunks

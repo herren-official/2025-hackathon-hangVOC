@@ -1,0 +1,101 @@
+[
+  {
+    "id": "0ec69ee7-682d-45d2-98ca-e6a280cd394d",
+    "text": "안녕하세요! 프로젝트 진행 상황은 어떤가요?\n현재 70% 정도 완료되었습니다. API 연동 부분만 마무리하면 됩니다.\nPython에서 OpenAI API를 사용하는 방법을 알려주실 수 있나요?\n먼저 pip install openai로 패키지를 설치하고, API 키를 설정한 후 client = OpenAI(api_key='your-key')로 초기화하면 됩니다.\n다음 주 회의 일정은 언제인가요?\n화요일 오후 2시로 예정되어 있습니다.\nChromaDB와 벡터 검색 기능을 구현하고 있는데, 임베딩 생성 부분에서 막혔어요.\nOpenAI의 text-embedding-3-small 모델을 사용하시는 것을 추천합니다. 성능도 좋고 비용도 저렴합니다.\nFastAPI와 Streamlit을 함께 사용하는 프로젝트 구조는 어떻게 설계하는 것이 좋을까요?\nFastAPI는 백엔드 API 서버로, Streamlit은 프론트엔드로 분리해서 개발하는 것이 좋습니다. FastAPI는 8000번 포트, Streamlit은 8501번 포트로 실행하면 됩니다.\n프로젝트 마감일이 다음 달 15일이라고 하셨죠?\n네, 맞습니다. 그때까지 테스트와 문서화까지 완료해야 합니다.\nDocker 컨테이너로 배포할 때 주의사항이 있나요?\n환경변수는 .env 파일 대신 docker-compose.yml에서 관리하고, 볼륨 마운트로 데이터 영속성을 보장해야 합니다.\n오늘 점심 메뉴 추천 부탁드립니다!\n날씨가 추우니 따뜻한 국밥이나 라멘은 어떠신가요?\npandas DataFrame을 JSON으로 변환하는 가장 효율적인 방법은 무엇인가요?\ndf.to_json(orient='records')를 사용하면 리스트 형태로 깔끔하게 변환됩니다.\nGit 브랜치 전략은 어떻게 가져가실 건가요?\nGit Flow를 사용하려고 합니다. main, develop, feature 브랜치로 관리할 예정입니다.",
+    "metadata": {
+      "first_ts": "1703001600.000001",
+      "last_ts": "1703010100.000020",
+      "message_count": 20,
+      "users": "U006, U001, U004, U002, U005, U003"
+    }
+  },
+  {
+    "id": "0d7fc187-1255-4049-a972-03530feff1fa",
+    "text": "<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000071551 / 고객데이터 업로드 시, 특수 문자 삭제 이슈\nhttps://www.notion.so/0909/S000071551-24c48de8e0ea8066a90ddfcefb70a385?source=copy_link\n@user\n등록 되어 있지 않은 번호로 전화 주셔서 제 전화기에 남겨 있는 기록으로 전화 드렸습니다.\n[공유] @user 님 안녕하세요! 스위퍼 미확인 건 전달드립니다 이번주도 파이팅입니다 :+1:\nhttps://herrencorp.slack.com/archives/C023VAWS002/p1754618448959009\n•  정액권 만료일 설정 \n    ◦  업데이트 쿼리는 DB 아직 반영되지 않았고 노션에 있음\n    ◦  특정 고객으로 확인되었으나 정액권이 없어서 재확인 중 (류진아님 01066013018)\nhttps://herrencorp.slack.com/archives/C023VAWS002/p1754902703306499\n• 매출 업로드 (헨리님 통해 요구사항 확인하여 변경 필요해보임)\n어제 하루 감사합니다~!\n<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000067077 / 예약취소가 반영되지 않는 오류\nhttps://www.notion.so/0909/S000067077-24d48de8e0ea8042ae5af0e8b4983cd0?v=ed23b6bc74924b6796a9836f4302dbf7&amp;source=copy_link\n\ncc. <!subteam^S02DWBHKXNG|@공비서cx>\n<!subteam^S037EQTAQKT|@공비서스위퍼> 오늘이전 예약 삭제및 취소되지않는 부분 확인되어 스위퍼 요청 취소하겠습니다!\n넵~\n@user 님, 혹시 원장님께서 예약취소해서 삭제희망하시는데 스위퍼요청해도 \"오늘이전예약삭제 취소불가\"때문에 예약삭제가 안되는 걸까요?\n\nCC. @user\n지금 같이 예약금 결제 내역이 존재하지 않으면 스위퍼 처리는 가능해보입니다.\ncc. @user\n네 정책적으로 오늘이전 예약에 대해서는 원장님 취소/삭제는 불가합니다. B2C와 연관된 정책이라서요. 불가피한 사유가 없는 이상 정책대로 안내 부탁드립니다.\n@user\nhttps://www.notion.so/0909/UnexpectedRollbackException-a0882c19925c4f7891456ce3797b4474?source=copy_link\nhttps://www.notion.so/0909/16048de8e0ea81baa41ce7150f8e088d?source=copy_link\n@user\n현재 문자 발송은 발송 직전에 문자 내용 중에서 이모지를 빈 문자열로 치환하는 로직만 존재합니다.\n<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000055002/예약금 환불 전액 들어오지 않은 현상\nhttps://www.notion.so/0909/S000055002-24d48de8e0ea80e283cad591179154aa?v=ed23b6bc74924b6796a9836f4302dbf7&amp;source=copy_link\n예전에도 비슷한 이슈가 하나 있었어요.\nhttps://herrencorp.slack.com/archives/C023VAWS002/p1750141207779729\n\n우리 환불 로그 한번 확인해주시고, 정상 환불 처리가 되었을 경우 고객이 네이버페이 로 결제하면서 1,000원은 포인트로 결제하였는지 확인필요합니다.\n```{\n  \"cancelledAt\": \"2025-08-12T11:23:15.000+0900\",\n  \"cancelledTid\": \"UT0009693m01012508062021135771\",\n  \"cancels\": [\n    {\n      \"tid\": \"UT0009693m01012508062021135771\",\n      \"amount\": 20000,\n      \"cancelledAt\": \"2025-08-12T11:23:15.000+0900\",\n      \"reason\": \"샵에서 직접 예약 취소\",\n      \"receiptUrl\": \"https://npg.nicepay.co.kr/issue/IssueLoader.do?type=0&amp;innerWin=Y&amp;TID=UT0009693m01012508062021135771\",\n      \"couponAmt\": 0\n    }\n  ],\n  \"resultCode\": \"0000\",\n  \"resultMsg\": \"정상 처리되었습니다.\",\n  \"tid\": \"UT0009693m01012508062021135771\",\n  \"orderId\": \"202508060816367319vBREGmpXe31Em0\",\n  \"ediDate\": \"2025-08-12T11:23:17.049+0900\",\n  \"signature\": \"d4703fc83dd3aeb314b5307340421d9a5ed6868c1371aa67e27fa02d8d52ce01\",\n  \"status\": \"cancelled\",\n  \"paidAt\": \"2025-08-06T20:21:14.000+0900\",\n  \"failedAt\": \"0\",\n  \"payMethod\": \"naverpay\",\n  \"amount\": 20000,\n  \"balanceAmt\": 0,\n  \"goodsName\": \"예약금-온, 정성\",\n  \"mallReserved\": null,\n  \"useEscrow\": false,\n  \"currency\": \"KRW\",\n  \"channel\": \"mobile\",\n  \"approveNo\": \"37185320\",\n  \"buyerName\": \"9702\",\n  \"buyerTel\": null,\n  \"buyerEmail\": \"<mailto:test@abc.com|test@abc.com>\",\n  \"issuedCashReceipt\": false,\n  \"receiptUrl\": \"https://npg.nicepay.co.kr/issue/IssueLoader.do?type=0&amp;innerWin=Y&amp;TID=UT0009693m01012508062021135771\",\n  \"mallUserId\": null,\n  \"card\": {\n    \"cardCode\": \"01\",\n    \"cardName\": \"비씨\",\n    \"cardNum\": \"920020******6909\",\n    \"cardQuota\": 0,\n    \"cardType\": \"check\",\n    \"isInterestFree\": false,\n    \"canPartCancel\": true,\n    \"acquCardCode\": \"01\",\n    \"acquCardName\": \"비씨\"\n  },\n  \"isSuccess\": true,\n  \"paidDateTime\": \"2025-08-06T20:21:14\",\n  \"failedDateTime\": null\n}```\n나이스페이 로그 확인해보니까 20000원 환불 요청 정상적으로 들어갔습니다.\n<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000032335/ 연간이용권을 월간이용권으로 변경신청\nhttps://www.notion.so/0909/S000032335-24d48de8e0ea8045be0bebc8ca94d8d9?v=ed23b6bc74924b6796a9836f4302dbf7&amp;source=copy_link\n헨리님이 말씀해주신대로 확인 필요합니다\n<!subteam^S037EQTAQKT|@공비서스위퍼>\n선납권 고객 1개월 무료 이용권 적용 요청 (공비서 앰버서더 챌린지 참여자)\nhttps://www.notion.so/0909/1-24d48de8e0ea80579918f241d83e09d0\n선납권은 구어드민에서 기한 늘려주면 될것 같은데요\n이건은 그럼 다음 결제상품을 스탠다드 월간으로 변경해놓으면 되죠? @user\n그런거 같아요\n선택하신게 스탠다드니 처리해놓을께요\n넵\n@user 님\n연간&gt;월간 이용권 변경신청은 원래 원장님들께서 못하시는 건가요? 스위퍼요청을 통해서만 가능한건가요?\n오. @user 님. 그렇네요! 적용 완료하였습니다.\n네 시스템에서 지원하지 않고 있어요. 월간-&gt; 연간 기간변경만 지원하고 있습니다.\n그래서 고객센터로 문의해달라고 팝업이 뜨는거에요\n아하! 감사합니다!\n변경하였습니다~\n정리하면 고객명앞에 특수문자 그대로 업로드 되도록 수정해서 차주 정기배포로 갈 예정입니다.\n@user 님\n원장님께 확인해야하는 부분일까요?\n네 맞습니다. 저희쪽에서 확인할 수 있는 부분은 환불 요청 20000원이 정상적으로 들어갔는지까지입니다.",
+    "metadata": {
+      "first_ts": "1754902703.306499",
+      "last_ts": "1754980386.569099",
+      "message_count": 33,
+      "users": "U08QJLV6KE1, U033SA84NCQ, U03BQJ0F2BF, U049Z5EUUMA, U0673KF578F, U08C94WKP7S, U08NVET4VA9, U07A8V1ECV6"
+    }
+  },
+  {
+    "id": "20564b0a-bf74-4cca-9089-43cd6812d9e1",
+    "text": "<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000071551 / 고객데이터 업로드 시, 특수 문자 삭제 이슈\nhttps://www.notion.so/0909/S000071551-24c48de8e0ea8066a90ddfcefb70a385?source=copy_link\n@user\n등록 되어 있지 않은 번호로 전화 주셔서 제 전화기에 남겨 있는 기록으로 전화 드렸습니다.\n[공유] @user 님 안녕하세요! 스위퍼 미확인 건 전달드립니다 이번주도 파이팅입니다 :+1:\nhttps://herrencorp.slack.com/archives/C023VAWS002/p1754618448959009\n•  정액권 만료일 설정 \n    ◦  업데이트 쿼리는 DB 아직 반영되지 않았고 노션에 있음\n    ◦  특정 고객으로 확인되었으나 정액권이 없어서 재확인 중 (류진아님 01066013018)\nhttps://herrencorp.slack.com/archives/C023VAWS002/p1754902703306499\n• 매출 업로드 (헨리님 통해 요구사항 확인하여 변경 필요해보임)\n어제 하루 감사합니다~!\n<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000067077 / 예약취소가 반영되지 않는 오류\nhttps://www.notion.so/0909/S000067077-24d48de8e0ea8042ae5af0e8b4983cd0?v=ed23b6bc74924b6796a9836f4302dbf7&amp;source=copy_link\n\ncc. <!subteam^S02DWBHKXNG|@공비서cx>\n<!subteam^S037EQTAQKT|@공비서스위퍼> 오늘이전 예약 삭제및 취소되지않는 부분 확인되어 스위퍼 요청 취소하겠습니다!\n넵~\n@user 님, 혹시 원장님께서 예약취소해서 삭제희망하시는데 스위퍼요청해도 \"오늘이전예약삭제 취소불가\"때문에 예약삭제가 안되는 걸까요?\n\nCC. @user\n지금 같이 예약금 결제 내역이 존재하지 않으면 스위퍼 처리는 가능해보입니다.\ncc. @user\n네 정책적으로 오늘이전 예약에 대해서는 원장님 취소/삭제는 불가합니다. B2C와 연관된 정책이라서요. 불가피한 사유가 없는 이상 정책대로 안내 부탁드립니다.\n@user\nhttps://www.notion.so/0909/UnexpectedRollbackException-a0882c19925c4f7891456ce3797b4474?source=copy_link\nhttps://www.notion.so/0909/16048de8e0ea81baa41ce7150f8e088d?source=copy_link\n@user\n현재 문자 발송은 발송 직전에 문자 내용 중에서 이모지를 빈 문자열로 치환하는 로직만 존재합니다.\n<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000055002/예약금 환불 전액 들어오지 않은 현상\nhttps://www.notion.so/0909/S000055002-24d48de8e0ea80e283cad591179154aa?v=ed23b6bc74924b6796a9836f4302dbf7&amp;source=copy_link\n예전에도 비슷한 이슈가 하나 있었어요.\nhttps://herrencorp.slack.com/archives/C023VAWS002/p1750141207779729\n\n우리 환불 로그 한번 확인해주시고, 정상 환불 처리가 되었을 경우 고객이 네이버페이 로 결제하면서 1,000원은 포인트로 결제하였는지 확인필요합니다.\n```{\n  \"cancelledAt\": \"2025-08-12T11:23:15.000+0900\",\n  \"cancelledTid\": \"UT0009693m01012508062021135771\",\n  \"cancels\": [\n    {\n      \"tid\": \"UT0009693m01012508062021135771\",\n      \"amount\": 20000,\n      \"cancelledAt\": \"2025-08-12T11:23:15.000+0900\",\n      \"reason\": \"샵에서 직접 예약 취소\",\n      \"receiptUrl\": \"https://npg.nicepay.co.kr/issue/IssueLoader.do?type=0&amp;innerWin=Y&amp;TID=UT0009693m01012508062021135771\",\n      \"couponAmt\": 0\n    }\n  ],\n  \"resultCode\": \"0000\",\n  \"resultMsg\": \"정상 처리되었습니다.\",\n  \"tid\": \"UT0009693m01012508062021135771\",\n  \"orderId\": \"202508060816367319vBREGmpXe31Em0\",\n  \"ediDate\": \"2025-08-12T11:23:17.049+0900\",\n  \"signature\": \"d4703fc83dd3aeb314b5307340421d9a5ed6868c1371aa67e27fa02d8d52ce01\",\n  \"status\": \"cancelled\",\n  \"paidAt\": \"2025-08-06T20:21:14.000+0900\",\n  \"failedAt\": \"0\",\n  \"payMethod\": \"naverpay\",\n  \"amount\": 20000,\n  \"balanceAmt\": 0,\n  \"goodsName\": \"예약금-온, 정성\",\n  \"mallReserved\": null,\n  \"useEscrow\": false,\n  \"currency\": \"KRW\",\n  \"channel\": \"mobile\",\n  \"approveNo\": \"37185320\",\n  \"buyerName\": \"9702\",\n  \"buyerTel\": null,\n  \"buyerEmail\": \"<mailto:test@abc.com|test@abc.com>\",\n  \"issuedCashReceipt\": false,\n  \"receiptUrl\": \"https://npg.nicepay.co.kr/issue/IssueLoader.do?type=0&amp;innerWin=Y&amp;TID=UT0009693m01012508062021135771\",\n  \"mallUserId\": null,\n  \"card\": {\n    \"cardCode\": \"01\",\n    \"cardName\": \"비씨\",\n    \"cardNum\": \"920020******6909\",\n    \"cardQuota\": 0,\n    \"cardType\": \"check\",\n    \"isInterestFree\": false,\n    \"canPartCancel\": true,\n    \"acquCardCode\": \"01\",\n    \"acquCardName\": \"비씨\"\n  },\n  \"isSuccess\": true,\n  \"paidDateTime\": \"2025-08-06T20:21:14\",\n  \"failedDateTime\": null\n}```\n나이스페이 로그 확인해보니까 20000원 환불 요청 정상적으로 들어갔습니다.\n<!subteam^S037EQTAQKT|@공비서스위퍼>\nS000032335/ 연간이용권을 월간이용권으로 변경신청\nhttps://www.notion.so/0909/S000032335-24d48de8e0ea8045be0bebc8ca94d8d9?v=ed23b6bc74924b6796a9836f4302dbf7&amp;source=copy_link\n헨리님이 말씀해주신대로 확인 필요합니다\n<!subteam^S037EQTAQKT|@공비서스위퍼>\n선납권 고객 1개월 무료 이용권 적용 요청 (공비서 앰버서더 챌린지 참여자)\nhttps://www.notion.so/0909/1-24d48de8e0ea80579918f241d83e09d0\n선납권은 구어드민에서 기한 늘려주면 될것 같은데요\n이건은 그럼 다음 결제상품을 스탠다드 월간으로 변경해놓으면 되죠? @user\n그런거 같아요\n선택하신게 스탠다드니 처리해놓을께요\n넵\n@user 님\n연간&gt;월간 이용권 변경신청은 원래 원장님들께서 못하시는 건가요? 스위퍼요청을 통해서만 가능한건가요?\n오. @user 님. 그렇네요! 적용 완료하였습니다.\n네 시스템에서 지원하지 않고 있어요. 월간-&gt; 연간 기간변경만 지원하고 있습니다.\n그래서 고객센터로 문의해달라고 팝업이 뜨는거에요\n아하! 감사합니다!\n변경하였습니다~\n정리하면 고객명앞에 특수문자 그대로 업로드 되도록 수정해서 차주 정기배포로 갈 예정입니다.\n@user 님\n원장님께 확인해야하는 부분일까요?\n네 맞습니다. 저희쪽에서 확인할 수 있는 부분은 환불 요청 20000원이 정상적으로 들어갔는지까지입니다.",
+    "metadata": {
+      "first_ts": "1754902703.306499",
+      "last_ts": "1754980386.569099",
+      "message_count": 33,
+      "users": "U08QJLV6KE1, U033SA84NCQ, U03BQJ0F2BF, U049Z5EUUMA, U0673KF578F, U08C94WKP7S, U08NVET4VA9, U07A8V1ECV6"
+    }
+  },
+  {
+    "id": "24f10448-470f-4d37-97b8-1b4d66928154",
+    "text": "안녕하세요! 프로젝트 진행 상황은 어떤가요?\n현재 70% 정도 완료되었습니다. API 연동 부분만 마무리하면 됩니다.\nPython에서 OpenAI API를 사용하는 방법을 알려주실 수 있나요?\n먼저 pip install openai로 패키지를 설치하고, API 키를 설정한 후 client = OpenAI(api_key='your-key')로 초기화하면 됩니다.\n다음 주 회의 일정은 언제인가요?\n화요일 오후 2시로 예정되어 있습니다.\nChromaDB와 벡터 검색 기능을 구현하고 있는데, 임베딩 생성 부분에서 막혔어요.\nOpenAI의 text-embedding-3-small 모델을 사용하시는 것을 추천합니다. 성능도 좋고 비용도 저렴합니다.\nFastAPI와 Streamlit을 함께 사용하는 프로젝트 구조는 어떻게 설계하는 것이 좋을까요?\nFastAPI는 백엔드 API 서버로, Streamlit은 프론트엔드로 분리해서 개발하는 것이 좋습니다. FastAPI는 8000번 포트, Streamlit은 8501번 포트로 실행하면 됩니다.\n프로젝트 마감일이 다음 달 15일이라고 하셨죠?\n네, 맞습니다. 그때까지 테스트와 문서화까지 완료해야 합니다.\nDocker 컨테이너로 배포할 때 주의사항이 있나요?\n환경변수는 .env 파일 대신 docker-compose.yml에서 관리하고, 볼륨 마운트로 데이터 영속성을 보장해야 합니다.\n오늘 점심 메뉴 추천 부탁드립니다!\n날씨가 추우니 따뜻한 국밥이나 라멘은 어떠신가요?\npandas DataFrame을 JSON으로 변환하는 가장 효율적인 방법은 무엇인가요?\ndf.to_json(orient='records')를 사용하면 리스트 형태로 깔끔하게 변환됩니다.\nGit 브랜치 전략은 어떻게 가져가실 건가요?\nGit Flow를 사용하려고 합니다. main, develop, feature 브랜치로 관리할 예정입니다.\n새로운 기능 개발 진행 상황은 어떤가요?\n로그인 기능 구현이 완료되었습니다. OAuth 2.0을 사용했습니다.\n좋습니다! 테스트는 진행하셨나요?\n네, 유닛 테스트와 통합 테스트 모두 작성했습니다. 커버리지는 85%입니다.\nCI/CD 파이프라인에 추가해주세요.\nGitHub Actions에 설정 완료했습니다.\n데이터베이스 마이그레이션 스크립트도 준비해야 합니다.\nAlembic을 사용해서 마이그레이션 스크립트 작성하겠습니다.\n프론트엔드 통합은 언제 가능한가요?\nReact 컴포넌트는 준비되어 있습니다. API 엔드포인트만 연결하면 됩니다.\n보안 감사 결과가 나왔습니다.\n어떤 이슈가 발견되었나요?\nSQL 인젝션 취약점 2개와 XSS 취약점 1개가 발견되었습니다.\n즉시 패치 작업을 시작하겠습니다. 예상 소요 시간은 3일입니다.\n보안 패치는 최우선 순위로 처리해주세요.\n네, 다른 작업을 중단하고 보안 패치에 집중하겠습니다.\nWAF 규칙도 업데이트해야 할 것 같습니다.\nCloudFlare WAF 규칙 업데이트 완료했습니다.\n패치 완료 후 재감사를 진행해주세요.\n알겠습니다. 패치 완료 즉시 재감사 요청하겠습니다.",
+    "metadata": {
+      "first_ts": "1703001600.000001",
+      "last_ts": "1703202700.000010",
+      "message_count": 40,
+      "source_files_count": 3,
+      "users": "U009, U014, U003, U004, U012, U013, U005, U007, U001, U011, U015, U006, U010, U002, U008"
+    }
+  },
+  {
+    "id": "f1352f78-767e-4514-aa23-4e237b26a35d",
+    "text": "@user@user\n예약금 우리 체크카드로 결제했다고 하십니다.  확인부탁드립니다.\n@user 님 이분 환불내역 좀 알려주세요 tid와 orderid요\ntid : UT0009693m01012508062021135771\norderId: 202508060816367319vBREGmpXe31Em0\n나이스페이에 문의는 했습니다.\n예전에도 같은 문의를 했는데 답변이 똑같았어요 cc. @user\n답변오면 다시 남길께요\n나이스페이에서 출력한 영수증입니다. 고객님이 카드사에 문의하는 방법외에는...\n나이스페이 답변입니다.\n@user 님 감사합니다!",
+    "metadata": {
+      "first_ts": "1754983320.797909",
+      "last_ts": "1754985387.359189",
+      "message_count": 8,
+      "users": "U049Z5EUUMA, U08QJLV6KE1, U03BQJ0F2BF"
+    }
+  },
+  {
+    "id": "341e2b9b-5e76-461f-808a-77542feac9d7",
+    "text": "안녕하세요! 프로젝트 진행 상황은 어떤가요?\n현재 70% 정도 완료되었습니다. API 연동 부분만 마무리하면 됩니다.\nPython에서 OpenAI API를 사용하는 방법을 알려주실 수 있나요?\n먼저 pip install openai로 패키지를 설치하고, API 키를 설정한 후 client = OpenAI(api_key='your-key')로 초기화하면 됩니다.\n다음 주 회의 일정은 언제인가요?\n화요일 오후 2시로 예정되어 있습니다.\nChromaDB와 벡터 검색 기능을 구현하고 있는데, 임베딩 생성 부분에서 막혔어요.\nOpenAI의 text-embedding-3-small 모델을 사용하시는 것을 추천합니다. 성능도 좋고 비용도 저렴합니다.\nFastAPI와 Streamlit을 함께 사용하는 프로젝트 구조는 어떻게 설계하는 것이 좋을까요?\nFastAPI는 백엔드 API 서버로, Streamlit은 프론트엔드로 분리해서 개발하는 것이 좋습니다. FastAPI는 8000번 포트, Streamlit은 8501번 포트로 실행하면 됩니다.\n프로젝트 마감일이 다음 달 15일이라고 하셨죠?\n네, 맞습니다. 그때까지 테스트와 문서화까지 완료해야 합니다.\nDocker 컨테이너로 배포할 때 주의사항이 있나요?\n환경변수는 .env 파일 대신 docker-compose.yml에서 관리하고, 볼륨 마운트로 데이터 영속성을 보장해야 합니다.\n오늘 점심 메뉴 추천 부탁드립니다!\n날씨가 추우니 따뜻한 국밥이나 라멘은 어떠신가요?\npandas DataFrame을 JSON으로 변환하는 가장 효율적인 방법은 무엇인가요?\ndf.to_json(orient='records')를 사용하면 리스트 형태로 깔끔하게 변환됩니다.\nGit 브랜치 전략은 어떻게 가져가실 건가요?\nGit Flow를 사용하려고 합니다. main, develop, feature 브랜치로 관리할 예정입니다.\n새로운 기능 개발 진행 상황은 어떤가요?\n로그인 기능 구현이 완료되었습니다. OAuth 2.0을 사용했습니다.\n좋습니다! 테스트는 진행하셨나요?\n네, 유닛 테스트와 통합 테스트 모두 작성했습니다. 커버리지는 85%입니다.\nCI/CD 파이프라인에 추가해주세요.\nGitHub Actions에 설정 완료했습니다.\n데이터베이스 마이그레이션 스크립트도 준비해야 합니다.\nAlembic을 사용해서 마이그레이션 스크립트 작성하겠습니다.\n프론트엔드 통합은 언제 가능한가요?\nReact 컴포넌트는 준비되어 있습니다. API 엔드포인트만 연결하면 됩니다.\n보안 감사 결과가 나왔습니다.\n어떤 이슈가 발견되었나요?\nSQL 인젝션 취약점 2개와 XSS 취약점 1개가 발견되었습니다.\n즉시 패치 작업을 시작하겠습니다. 예상 소요 시간은 3일입니다.\n보안 패치는 최우선 순위로 처리해주세요.\n네, 다른 작업을 중단하고 보안 패치에 집중하겠습니다.\nWAF 규칙도 업데이트해야 할 것 같습니다.\nCloudFlare WAF 규칙 업데이트 완료했습니다.\n패치 완료 후 재감사를 진행해주세요.\n알겠습니다. 패치 완료 즉시 재감사 요청하겠습니다.",
+    "metadata": {
+      "first_ts": "1703001600.000001",
+      "last_ts": "1703202700.000010",
+      "message_count": 40,
+      "source_files_count": 3,
+      "users": "U009, U014, U003, U004, U012, U013, U005, U007, U001, U011, U015, U006, U010, U002, U008"
+    }
+  },
+  {
+    "id": "731272d3-75af-4b83-98e3-be4f5029e8ca",
+    "text": "새로운 기능 개발 진행 상황은 어떤가요?\n로그인 기능 구현이 완료되었습니다. OAuth 2.0을 사용했습니다.\n좋습니다! 테스트는 진행하셨나요?\n네, 유닛 테스트와 통합 테스트 모두 작성했습니다. 커버리지는 85%입니다.\nCI/CD 파이프라인에 추가해주세요.\nGitHub Actions에 설정 완료했습니다.\n데이터베이스 마이그레이션 스크립트도 준비해야 합니다.\nAlembic을 사용해서 마이그레이션 스크립트 작성하겠습니다.\n프론트엔드 통합은 언제 가능한가요?\nReact 컴포넌트는 준비되어 있습니다. API 엔드포인트만 연결하면 됩니다.\n안녕하세요! 프로젝트 진행 상황은 어떤가요?\n현재 70% 정도 완료되었습니다. API 연동 부분만 마무리하면 됩니다.\nPython에서 OpenAI API를 사용하는 방법을 알려주실 수 있나요?\n먼저 pip install openai로 패키지를 설치하고, API 키를 설정한 후 client = OpenAI(api_key='your-key')로 초기화하면 됩니다.\n다음 주 회의 일정은 언제인가요?\n화요일 오후 2시로 예정되어 있습니다.\nChromaDB와 벡터 검색 기능을 구현하고 있는데, 임베딩 생성 부분에서 막혔어요.\nOpenAI의 text-embedding-3-small 모델을 사용하시는 것을 추천합니다. 성능도 좋고 비용도 저렴합니다.\nFastAPI와 Streamlit을 함께 사용하는 프로젝트 구조는 어떻게 설계하는 것이 좋을까요?\nFastAPI는 백엔드 API 서버로, Streamlit은 프론트엔드로 분리해서 개발하는 것이 좋습니다. FastAPI는 8000번 포트, Streamlit은 8501번 포트로 실행하면 됩니다.\n프로젝트 마감일이 다음 달 15일이라고 하셨죠?\n네, 맞습니다. 그때까지 테스트와 문서화까지 완료해야 합니다.\nDocker 컨테이너로 배포할 때 주의사항이 있나요?\n환경변수는 .env 파일 대신 docker-compose.yml에서 관리하고, 볼륨 마운트로 데이터 영속성을 보장해야 합니다.\n오늘 점심 메뉴 추천 부탁드립니다!\n날씨가 추우니 따뜻한 국밥이나 라멘은 어떠신가요?\npandas DataFrame을 JSON으로 변환하는 가장 효율적인 방법은 무엇인가요?\ndf.to_json(orient='records')를 사용하면 리스트 형태로 깔끔하게 변환됩니다.\nGit 브랜치 전략은 어떻게 가져가실 건가요?\nGit Flow를 사용하려고 합니다. main, develop, feature 브랜치로 관리할 예정입니다.\n보안 감사 결과가 나왔습니다.\n어떤 이슈가 발견되었나요?\nSQL 인젝션 취약점 2개와 XSS 취약점 1개가 발견되었습니다.\n즉시 패치 작업을 시작하겠습니다. 예상 소요 시간은 3일입니다.\n보안 패치는 최우선 순위로 처리해주세요.\n네, 다른 작업을 중단하고 보안 패치에 집중하겠습니다.\nWAF 규칙도 업데이트해야 할 것 같습니다.\nCloudFlare WAF 규칙 업데이트 완료했습니다.\n패치 완료 후 재감사를 진행해주세요.\n알겠습니다. 패치 완료 즉시 재감사 요청하겠습니다.",
+    "metadata": {
+      "first_ts": "1703100000.000001",
+      "last_ts": "1703202700.000010",
+      "message_count": 40,
+      "source_files_count": 3,
+      "users": "U009, U014, U003, U004, U012, U013, U005, U007, U011, U001, U015, U006, U010, U002, U008"
+    }
+  },
+  {
+    "id": "e6f614ab-559c-44f1-a026-8cb75e03ce48",
+    "text": "<@U09AAUU27GV> 예약 취소 수수료 얼마야\n<@U09AT691PAB> 안녕\n<@U09AAUU27GV> 안녕? 넌 누구니\n<@U09AAUU27GV> 쿠폰 정채ㅔㄱ",
+    "metadata": {
+      "first_ts": "1755660478.106869",
+      "hours_back": 2,
+      "last_ts": "1755659394.833959",
+      "message_count": 4,
+      "source": "slack_api",
+      "sync_time": "2025-08-20T12:51:04.776249",
+      "users": "U04N57XTTQW, U04G9GFCJ0J, U07H9CA8JMC"
+    }
+  },
+  {
+    "id": "13102871-5408-48e3-90b8-c6a1fe339a34",
+    "text": "<@U09AAUU27GV> 예약 취소 수수료 얼마야\n<@U09AT691PAB> 안녕\n<@U09AAUU27GV> 안녕? 넌 누구니\n<@U09AAUU27GV> 쿠폰 정채ㅔㄱ\n<@U09AAUU27GV> 왔니?\n<@U09AAUU27GV> 안녕\n<@U09AAUU27GV> 오류?\n<@U09AAUU27GV> ㅎㅇ\n<@U09AAUU27GV> 안녕\n<@U09AAUU27GV> ㅎㅇ\n<@U09AAUU27GV> ㅎㅇ\n<@U09AAUU27GV> ㅎㅇ\n<@U09AAUU27GV>",
+    "metadata": {
+      "first_ts": "1755660478.106869",
+      "hours_back": 24,
+      "last_ts": "1755584189.150659",
+      "message_count": 13,
+      "source": "slack_api",
+      "sync_time": "2025-08-20T12:51:20.654729",
+      "users": "U04N57XTTQW, U015RL0N10D, U04G9GFCJ0J, U07H9CA8JMC"
+    }
+  }
+]
